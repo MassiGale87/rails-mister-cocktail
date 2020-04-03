@@ -1,0 +1,20 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/dbf40a93667355.5e6a5df5ae7e1.gif');">
+  <div class="container">
+    <h1><strong>Cocktails from all over the world</strong></h1>
+    <p>Create your own cocktail and become a real mixologist!</p>
+    <a class="btn btn-flat" href="#">Start now!</a>
+  </div>
+</div>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+  <li><%= cocktail.name %></li>
+  <% end %>
+</ul>
+
+
+
+
+
+<%= link_to "Create cocktail", new_cocktail_path %>

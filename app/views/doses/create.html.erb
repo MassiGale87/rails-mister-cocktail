@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1>Create your special dose for amazing cocktails</h1>
+</div>
+
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.association :company %>
+  <%= f.association :roles %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to the Homepage", cocktails_new_path %>
