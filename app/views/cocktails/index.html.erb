@@ -3,18 +3,30 @@
   <div class="container">
     <h1><strong>Cocktails from all over the world</strong></h1>
     <p>Create your own cocktail and become a real mixologist!</p>
-    <a class="btn btn-flat" href="#">Start now!</a>
+    <a class="btn btn-gradient" href="#">Start now</a>
   </div>
 </div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= cocktail.name %></li>
-  <% end %>
-</ul>
+<div>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li><%= cocktail.name %></li>
+    <% end %>
+  </ul>
+</div>
 
 
 
 
 
-<%= link_to "Create cocktail", new_cocktail_path %>
+
+<div class="footer">
+  <div class="footer-links">
+    <%= link_to "Create cocktail", new_cocktail_path%>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> by Massi Gale
+  </div>
+</div>
+
+
