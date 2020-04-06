@@ -1,4 +1,4 @@
-
+<br>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/dbf40a93667355.5e6a5df5ae7e1.gif');">
   <div class="container">
     <h1><strong>Cocktails from all over the world</strong></h1>
@@ -12,10 +12,12 @@
 
 <div class="col-sm-12 col-md-6 col-lg-4">
   <ul>
+    <br>
     <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %></li>
+    <br>
     <li><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "btn btn-primary"%></li>
     <% end %>
+    <br>
   </ul>
 </div>
 

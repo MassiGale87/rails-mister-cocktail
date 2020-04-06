@@ -1,19 +1,28 @@
-
+<br>
 <div class="container">
   <h1>New Cocktails</h1>
   <p>create your own cocktail</p>
 </div>
 
+  <div class="container">
+    <div class="col-xs-10 col-xs-offset-1">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :name %>
+        <%= f.input :doses %>
+        <%= f.input :ingredients %>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :doses %>
-  <%= f.input :ingredients %>
-  <%= f.submit %>
-<% end %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 
 
-<div><%= link_to "Back to the Homepage", cocktails_path %>
+<div class="container">
+  <br>
+  <%= link_to "Back to the Homepage", cocktails_path  %>
+  <br>
 </div>
