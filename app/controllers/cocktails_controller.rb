@@ -29,7 +29,6 @@ class CocktailsController < ApplicationController
   # GET /cocktails/:id
 
   def show
-    @cocktail = Cocktail.new
   end
 
   # Use callbacks to share common setup or constraints between actions.

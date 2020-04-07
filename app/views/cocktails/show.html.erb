@@ -3,4 +3,18 @@
   <h1>Cocktails show</h1>
 </div>
 
+<h1> <%= @cocktail.name %> </h1>
+<% @cocktail.doses.each do |dose| %>
+<p> Quantity/Description: <%= dose.description %> </p>
+   <p> Name: <%= dose.ingredient.name %> </p>
+   <p> <%= link_to "Delete the dose", cocktail_dose_path(@cocktail, dose), method: :delete, data: {confirm: "Sei sicuro?"}%> </p>
+  <% end %>
+</p>
+
+
+
+
+<%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %>
+
+
 <%= link_to "Back to the Homepage", cocktails_path %>
