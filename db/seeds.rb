@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-Cocktail.create(name: "Invisibile")
-Cocktail.create(name: "Negroni")
-Cocktail.create(name: "Sbagliato")
-Cocktail.create(name: "Martini 007")
-Cocktail.create(name: "Spritz")
-Cocktail.create(name: "Moscow Mule")
+Cocktail.create(name: "Avengers")
+Cocktail.create(name: "Thor")
+Cocktail.create(name: "Superman")
+Cocktail.create(name: "Batman")
+Cocktail.create(name: "Diana Prince")
+Cocktail.create(name: "Flash")
 
 
 

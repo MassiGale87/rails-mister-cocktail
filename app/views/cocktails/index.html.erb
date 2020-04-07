@@ -1,111 +1,26 @@
 <br>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://im4.ezgif.com/tmp/ezgif-4-dbd4a69be5b3.webp');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://thumbs.gfycat.com/AlarmedDelightfulHomalocephale-size_restricted.gif');">
   <div class="container">
-    <h1><strong>Cocktails from all over the world</strong></h1>
-    <p>Create your own cocktail and become a real mixologist!</p>
+    <h1><strong>Today is your lucky day. Become a super heroe!</strong></h1>
+    <p>Fighting doesn’t make you a hero. Creating your own cocktail yes!</p>
         <%= link_to "New cocktail", new_cocktail_path, class: "badge badge-light"%>
-
   </div>
-</div>
-
-<!-- https://cdn.dribbble.com/users/3980005/screenshots/7015874/han.gif
- -->
 
 
-<!-- The grid: three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b1');">
-    <div>
-        <img src="https://thumbs.gfycat.com/PlumpFancyAsiaticlesserfreshwaterclam.webp" style="height:200px",  width="450" ></div>
-  </div>
-  <div class="column" onclick="openTab('b2');">
-    <div>
-        <img src="https://www.engiel.com/wp-content/uploads/2019/05/GIF-Una-notte-da-leoni-2-3.gif" style="height:200px",  width="450" ></div>
-  </div>
-  <div class="column" onclick="openTab('b3');">
-    <div>
-        <img src="https://www.engiel.com/wp-content/uploads/2019/05/GIF-Una-notte-da-leoni-2-5.gif" style="height:200px",  width="400" ></div>
-  </div>
-</div>
-
-
-
-<!-- The expanding grid (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:green">
-  <!-- If you want the ability to close the container, add a close button -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Box 1</h2>
-  <p>Lorem ipsum..</p>
-</div>
-
-<div id="b2" class="containerTab" style="display:none;background:blue">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Box 2</h2>
-  <p>Lorem ipsum..</p>
-</div>
-
-<div id="b3" class="containerTab" style="display:none;background:red">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Box 3</h2>
-  <p>Lorem ipsum..</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class = "container"  class="row">
-  <div class="side">
-    <h2>Do you want become a real Wonder Woman?</h2>
-    <div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/cea86384200529.5d54eb2806c34.jpg" style="height:200px",  width="auto" ></div>
-    <h5>Here the list of wonder woman's cocktail</h5>
-
-
-
-
-
-
-<div class="row">
-  <div class="row">
-    <div class = "container" class="col-sm-12 col-md-6 col-lg-4">
-    <ul>
+<div class = "container" class="col-sm-12 col-md-6 col-lg-4">
+  <ul>
+    <br>
+    <% @cocktails.each do |cocktail| %>
+    <br>
+    <li><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "badge badge-light" %></li>
+    <% end %>
       <br>
-      <% @cocktails.each do |cocktail| %>
-      <br>
-      <li><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "badge badge-light" %></li>
-      <div>
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8fa54316498091.599b99e7a2332.png" style="height:200px",  width="200" ></div>
-      <% end %>
-      <br>
-    </ul>
-</div>
-
-<div></div>
-<div class="container" class="row">
-  <div class="column"></div>
-  <div class="column"></div>
-  <div class="column"></div>
-</div>
+  </ul>
 </div>
 
 
-<div class="footer">
-  <div class="footer-links">
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> by Massi Galeotti
-  </div>
+<div class="footer-copyright text-center py-3">This footer is made with <i class="fas fa-heart"></i> by Massi Galeotti
+  <a href="https://github.com/MassiGale87"><i class="fab fa-github"></i></a>
 </div>
-
 
 
